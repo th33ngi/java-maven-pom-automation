@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Automation Testing">
+	<listeners>
+		<listener class-name="com.focus.listener.TestListener" />
+	</listeners>
+	<test name="Functional Testing">
+		<classes>
+			<class name="com.focus.test.GooglePageTest" />
+			<class name="com.focus.test.FocusPageTest" />
+		</classes>
+	</test>
+</suite>
