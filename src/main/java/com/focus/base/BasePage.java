@@ -38,7 +38,7 @@ public class BasePage extends Page {
 				driver = new ChromeDriver(optionsManager.getChromeOptions());
 			} else {
 				optionsManager = new OptionsManager(prop);
-				System.setProperty("webdriver.chrome.driver", "./src/test/resources/linux/chromedriver");
+				System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 				driver = new ChromeDriver(optionsManager.getChromeOptions());
 			}
 		} else {
