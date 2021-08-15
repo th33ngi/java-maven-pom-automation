@@ -22,6 +22,8 @@ public class OptionsManager {
 			HashMap <String, Object> chromePrefs = new HashMap <String, Object>();
 			chromePrefs.put("plugins.always_open_pdf_externally", true);
 			chromeOptions.setExperimentalOption("prefs", chromePrefs);
+			chromeOptions.addArguments("no-sandbox");
+			chromeOptions.addArguments("--headless");
 		return chromeOptions;
 	}
 	
