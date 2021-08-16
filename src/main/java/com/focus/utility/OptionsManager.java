@@ -1,6 +1,5 @@
 package com.focus.utility;
 
-import java.util.HashMap;
 import java.util.Properties;
 
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -20,8 +19,8 @@ public class OptionsManager {
 	public ChromeOptions getChromeOptions() {
 		chromeOptions = new ChromeOptions();
 		chromeOptions.setHeadless(true);
-		/*chromeOptions.addArguments("--headless");
-		chromeOptions.addArguments("--no-sandbox");
+		chromeOptions.addArguments("headless");
+		/*chromeOptions.addArguments("--no-sandbox");
 		chromeOptions.addArguments("--disable-dev-shm-usage");*/
 		return chromeOptions;
 	}
