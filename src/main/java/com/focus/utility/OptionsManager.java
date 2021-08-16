@@ -21,8 +21,14 @@ public class OptionsManager {
 		chromeOptions = new ChromeOptions();
 			HashMap <String, Object> chromePrefs = new HashMap <String, Object>();
 			chromePrefs.put("plugins.always_open_pdf_externally", true);
+		chromeOptions.addArguments("disable-infobars");
+		chromeOptions.addArguments("--disable-browser-side-navigation");
+		chromeOptions.addArguments("--start-maximized");
 		chromeOptions.addArguments("--no-sandbox");
 		chromeOptions.addArguments("--disable-dev-shm-usage");
+		chromeOptions.addArguments("--no-sandbox");
+		chromeOptions.addArguments("--headless");
+		chromeOptions.setExperimentalOption("useAutomationExtension", false);
 		chromeOptions.setExperimentalOption("prefs", chromePrefs);
 		return chromeOptions;
 	}
