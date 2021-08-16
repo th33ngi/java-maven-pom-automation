@@ -19,6 +19,7 @@ public class OptionsManager {
 	
 	public ChromeOptions getChromeOptions() {
 		chromeOptions = new ChromeOptions();
+		chromeOptions.addArguments("--headless");
 		chromeOptions.addArguments("--no-sandbox");
 		chromeOptions.addArguments("--disable-dev-shm-usage");
 		chromeOptions.setExperimentalOption("useAutomationExtension", false);
