@@ -19,11 +19,10 @@ public class OptionsManager {
 	
 	public ChromeOptions getChromeOptions() {
 		chromeOptions = new ChromeOptions();
+		chromeOptions.addArguments("--no-sandbox", "--disable-dev-shm-usage");
 			HashMap <String, Object> chromePrefs = new HashMap <String, Object>();
 			chromePrefs.put("plugins.always_open_pdf_externally", true);
-			chromeOptions.setExperimentalOption("prefs", chromePrefs);
-			chromeOptions.addArguments("no-sandbox");
-			chromeOptions.addArguments("--headless");
+		chromeOptions.setExperimentalOption("prefs", chromePrefs);
 		return chromeOptions;
 	}
 	
