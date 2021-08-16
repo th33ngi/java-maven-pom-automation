@@ -1,6 +1,5 @@
 package com.focus.base;
 
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -38,9 +37,8 @@ public class BasePage extends Page {
 				System.setProperty("webdriver.chrome.driver", "./src/test/resources/win/chromedriver.exe");
 				driver = new ChromeDriver(optionsManager.getChromeOptions());
 			} else {
-				File file = new File("/usr/bin/chromedriver");
 				optionsManager = new OptionsManager(prop);
-				System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
+				System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 				driver = new ChromeDriver(optionsManager.getChromeOptions());
 			}
 		} else {
