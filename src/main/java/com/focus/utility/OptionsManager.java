@@ -18,13 +18,17 @@ public class OptionsManager {
 	
 	public ChromeOptions getChromeOptions() {
 		chromeOptions = new ChromeOptions();
-		chromeOptions.addArguments("headless");
+		/*chromeOptions.addArguments("headless");
 		chromeOptions.addArguments("window-size=1280x800");
 		chromeOptions.addArguments("no-sandbox");
 		chromeOptions.addArguments("–disable-dev-shm-usage");
 		chromeOptions.addArguments("start-maximized");
 		chromeOptions.addArguments("--disable-gpu");
-		chromeOptions.addArguments("--disable-setuid-sandbox");
+		chromeOptions.addArguments("--disable-setuid-sandbox");*/
+		chromeOptions.setBinary("/usr/bin/google-chrome");
+		chromeOptions.addArguments("--headless");
+		chromeOptions.addArguments("--no-sandbox");
+		chromeOptions.addArguments("--disable-dev-shm-usage");
 		return chromeOptions;
 	}
 	
